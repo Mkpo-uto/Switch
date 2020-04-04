@@ -50,17 +50,75 @@ public class Main {
                 System.out.println("Not sure");
         }
 
-        DayOfTheWeekChallenge.printDayOfTheWeek(-1);
-        DayOfTheWeekChallenge.printDayOfTheWeek(0);
-        DayOfTheWeekChallenge.printDayOfTheWeek(1);
-        DayOfTheWeekChallenge.printDayOfTheWeek(2);
-        DayOfTheWeekChallenge.printDayOfTheWeek(3);
-        DayOfTheWeekChallenge.printDayOfTheWeek(4);
-        DayOfTheWeekChallenge.printDayOfTheWeek(5);
-        DayOfTheWeekChallenge.printDayOfTheWeek(6);
-        DayOfTheWeekChallenge.printDayOfTheWeek(7);
+//        DayOfTheWeekChallenge.printDayOfTheWeek(-1);
+//        DayOfTheWeekChallenge.printDayOfTheWeek(0);
+//        DayOfTheWeekChallenge.printDayOfTheWeek(1);
+//        DayOfTheWeekChallenge.printDayOfTheWeek(2);
+//        DayOfTheWeekChallenge.printDayOfTheWeek(3);
+//        DayOfTheWeekChallenge.printDayOfTheWeek(4);
+//        DayOfTheWeekChallenge.printDayOfTheWeek(5);
+//        DayOfTheWeekChallenge.printDayOfTheWeek(6);
+//        DayOfTheWeekChallenge.printDayOfTheWeek(7);
+
+//        System.out.println(NumberOfDaysInMonth.isLeapYear(-1600));
+//        System.out.println(NumberOfDaysInMonth.isLeapYear(1600));
+//        System.out.println(NumberOfDaysInMonth.isLeapYear(2017));
+//        System.out.println(NumberOfDaysInMonth.isLeapYear(2000));
+//
+//        System.out.println(NumberOfDaysInMonth.getDaysInMonth(1, 2020));
+//        System.out.println(NumberOfDaysInMonth.getDaysInMonth(2, 2020));
+//        System.out.println(NumberOfDaysInMonth.getDaysInMonth(2, 2018));
+//        System.out.println(NumberOfDaysInMonth.getDaysInMonth(-1, 2020));
+//        System.out.println(NumberOfDaysInMonth.getDaysInMonth(1, -2020));
+//        System.out.println(NumberOfDaysInMonth.getDaysInMonth(6, 2020));
+
+        System.out.println("10,000 at 2% interest = " + calculateInterest(10000.0, 2.0));
+
+	    for(int interestRate = 2; interestRate <= 8; interestRate++){
+            System.out.println("10,000 at " + interestRate + "% interest = " + String.format("%.2f",calculateInterest(10000, interestRate)));
+        }
+
+        System.out.println("******************************************");
+
+        for(int interestRate = 8; interestRate >= 2; interestRate--){
+            System.out.println("10,000 at " + interestRate + "% interest = " + String.format("%.2f",calculateInterest(10000, interestRate)));
+        }
+
+	    for(int i = 0;i < 5;i++){
+            System.out.println("Loop " + i + " hello!");
+        }
+
+        int count = 0;
+	    for(int j = 0; j < 10; j++){
+	        boolean prime = isPrime(j);
+	        if(prime == true){
+                count += 1;
+                System.out.println(j + " is a prime number");
+                if (count == 10){
+                    System.out.println("Exiting for loop");
+                    break;
+                }
+            }
+        }
 
     }
 
+    public static boolean isPrime(int n){
+        if(n <= 1){
+            return false;
+        }
+
+        for(int i = 2; i <= n/2;i++){
+            if(n % i == 0){
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    public static double calculateInterest(double amount, double interestRate){
+        return (amount * (interestRate/100));
+    }
 
 }
