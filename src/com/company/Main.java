@@ -4,51 +4,51 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int switchValue = 3;
-	    switch (switchValue){
-            case 1:
-                System.out.println("Value was 1");
-                break;
-            case 2:
-                System.out.println("Value was 2");
-                break;
-            case 3: case 4: case 5:
-                System.out.println("was a 3, or a 4, or a 5");
-                System.out.println("Actually it was a " + switchValue);
-                break;
-            default:
-                System.out.println("Was not 1 or 2");
-                break;
-        }
+//        int switchValue = 3;
+//	    switch (switchValue){
+//            case 1:
+//                System.out.println("Value was 1");
+//                break;
+//            case 2:
+//                System.out.println("Value was 2");
+//                break;
+//            case 3: case 4: case 5:
+//                System.out.println("was a 3, or a 4, or a 5");
+//                System.out.println("Actually it was a " + switchValue);
+//                break;
+//            default:
+//                System.out.println("Was not 1 or 2");
+//                break;
+//        }
 
-        int charValue = 'F';
-	    switch (charValue){
-            case 'A':
-                System.out.println("A is found");
-                break;
-            case 'B':
-                System.out.println("B is found");
-                break;
-            case 'C': case 'D': case 'E':
-                System.out.println(charValue + " is found");
-                break;
-
-            default:
-                System.out.println("A,B,C,D or E not found");
-                break;
-        }
-
-        String month = "June";
-	    switch (month.toLowerCase()){
-            case "january":
-                System.out.println("Jan");
-                break;
-            case "june":
-                System.out.println("Jun");
-                break;
-            default:
-                System.out.println("Not sure");
-        }
+//        int charValue = 'F';
+//	    switch (charValue){
+//            case 'A':
+//                System.out.println("A is found");
+//                break;
+//            case 'B':
+//                System.out.println("B is found");
+//                break;
+//            case 'C': case 'D': case 'E':
+//                System.out.println(charValue + " is found");
+//                break;
+//
+//            default:
+//                System.out.println("A,B,C,D or E not found");
+//                break;
+//        }
+//
+//        String month = "June";
+//	    switch (month.toLowerCase()){
+//            case "january":
+//                System.out.println("Jan");
+//                break;
+//            case "june":
+//                System.out.println("Jun");
+//                break;
+//            default:
+//                System.out.println("Not sure");
+//        }
 
 //        DayOfTheWeekChallenge.printDayOfTheWeek(-1);
 //        DayOfTheWeekChallenge.printDayOfTheWeek(0);
@@ -191,10 +191,46 @@ public class Main {
 //        FactorPrinter.printFactors(32);
 //        FactorPrinter.printFactors(10);
 //        FactorPrinter.printFactors(-1);
-        System.out.println(PerfectNumber.isPerfectNumber(6));
-        System.out.println(PerfectNumber.isPerfectNumber(28));
-        System.out.println(PerfectNumber.isPerfectNumber(5));
-        System.out.println(PerfectNumber.isPerfectNumber(-1));
+//        System.out.println(PerfectNumber.isPerfectNumber(6));
+//        System.out.println(PerfectNumber.isPerfectNumber(28));
+//        System.out.println(PerfectNumber.isPerfectNumber(5));
+//        System.out.println(PerfectNumber.isPerfectNumber(-1));
+
+//        System.out.println(NumberToWords.reverse(-121));
+//        System.out.println(NumberToWords.reverse(1212));
+//        System.out.println(NumberToWords.reverse(1234));
+//        System.out.println(NumberToWords.reverse(100));
+//        NumberToWords.numberToWords(123);
+//        System.out.println();
+//        NumberToWords.numberToWords(1010);
+//        System.out.println();
+//        NumberToWords.numberToWords(1000);
+//        System.out.println();
+//        NumberToWords.numberToWords(-12);
+//        NumberToWords.numberToWords(0);
+//        System.out.println(NumberToWords.getDigitCount(0));
+
+//        String numberAsString = "2020.125";
+//        System.out.println("numberAsString =" + numberAsString);
+
+        //int number = Integer.parseInt(numberAsString);
+//        double number = Double.parseDouble(numberAsString);
+//        System.out.println("number = " + number);
+//
+//        numberAsString += 1;
+//        number += 1;
+//
+//        System.out.println("numberAsString =" + numberAsString);
+//        System.out.println("number = " + number);
+
+        System.out.println(FlourPacker.canPack(-3, 2, 12));
+        System.out.println(FlourPacker.canPack(2, 2, 11));
+        System.out.println(FlourPacker.canPack(1, 0, 4));
+        System.out.println(FlourPacker.canPack(1, 0, 5));
+        System.out.println(FlourPacker.canPack(0, 5, 4));
+        System.out.println(FlourPacker.canPack(2, 0, 9));
+        System.out.println(FlourPacker.canPack(1, 5, 9));
+        System.out.println(FlourPacker.canPack(1, 0, 6));
 
 
     }
