@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -223,14 +225,39 @@ public class Main {
 //        System.out.println("numberAsString =" + numberAsString);
 //        System.out.println("number = " + number);
 
-        System.out.println(FlourPacker.canPack(-3, 2, 12));
-        System.out.println(FlourPacker.canPack(2, 2, 11));
-        System.out.println(FlourPacker.canPack(1, 0, 4));
-        System.out.println(FlourPacker.canPack(1, 0, 5));
-        System.out.println(FlourPacker.canPack(0, 5, 4));
-        System.out.println(FlourPacker.canPack(2, 0, 9));
-        System.out.println(FlourPacker.canPack(1, 5, 9));
-        System.out.println(FlourPacker.canPack(1, 0, 6));
+//        System.out.println(FlourPacker.canPack(-3, 2, 12));
+//        System.out.println(FlourPacker.canPack(2, 2, 11));
+//        System.out.println(FlourPacker.canPack(1, 0, 4));
+//        System.out.println(FlourPacker.canPack(1, 0, 5));
+//        System.out.println(FlourPacker.canPack(0, 5, 4));
+//        System.out.println(FlourPacker.canPack(2, 0, 9));
+//        System.out.println(FlourPacker.canPack(1, 5, 9));
+//        System.out.println(FlourPacker.canPack(1, 0, 6));
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter your name: ");
+        String name = scanner.nextLine();
+
+        System.out.println("Enter your year of birth: ");
+        boolean hasNextInt = scanner.hasNextInt();
+
+        if(hasNextInt){
+            int yearOfBirth = scanner.nextInt();
+
+            int age = 2020 - yearOfBirth;
+
+            if(age >= 0 && age <= 100){
+                System.out.println("Your name is " + name + ", and you are " + age + " years old.");
+            } else {
+                System.out.println("Invalid year of birth");
+            }
+        } else {
+            System.out.println("Unable to parse year of birth.");
+        }
+
+
+
+        scanner.close();
 
 
     }
